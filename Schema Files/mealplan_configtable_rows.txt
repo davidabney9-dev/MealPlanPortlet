@@ -1,0 +1,53 @@
+product             [CNTRMPLN]
+name                [EmailToField                    ]
+value               [students@lists.centre.edu                         ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+std_value           [students@lists.centre.edu                         ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+comm                [The to address for the Centre Meal Plan email message.?   ]
+
+
+
+product             [CNTRMPLN]
+name                [EmailFromField                  ]
+value               [anita.bertram@lists.centre.edu                    ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+std_value           [helpdesk@centre.edu                               ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+comm                [The from address for the Centre Meal Plan email message.? ]
+
+
+
+product             [CNTRMPLN]
+name                [EmailSubject                    ]
+value               [Meal Plan Change                                  ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+std_value           [Meal Plan Open                                    ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+comm                [The subject for the Centre Meal Plan email message.?      ]
+
+
+
+product             [CNTRMPLN]
+name                [EmailMessage                    ]
+value               [Message is in comments                            ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+std_value           [Message in in comments                            ]
+                    [                                                  ]
+                    [                                                  ]
+                    [                                                  ]
+comm                [Email message goes here...				       ]

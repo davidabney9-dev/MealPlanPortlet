@@ -1,0 +1,75 @@
+table cntr_mplan_table
+    desc        "Identifies the various meal plan types."
+    location    "DBS_STUDENT"
+    lockmode    row
+    prefix      "cntr_mplan"
+    rowlimits   ??:??
+    status      "Active"
+    text        "Meal Plan Table"
+    track       "STUDENT"
+
+column meal_plan_type     char(1) default " " not null
+    comments    ""
+    desc        "A code that identifies the type of Meal Plan."
+    heading     "Meal"
+    text        "Meal Plan Code"
+    attributes
+        (
+        )
+
+column txt                char(24) not null
+    comments    ""
+    desc        "Name of the meal plan code."
+    heading     "Meal Plan Name"
+    text        "Meal Plan Name"
+    attributes
+        (
+        )
+
+column descr            char(100)
+    comments    ""
+    desc        "Describes the meal plan code."
+    heading     "Meal Plan Desc"
+    text        "Meal Plan Desc"
+    attributes
+        (
+        )
+
+column active_date          date
+    comments    ""
+    desc        "Date indicates when row is active"
+    heading     "Active Begin"
+    text        "Active Begin Date"
+    attributes
+        (
+        )
+
+column inactive_date          date
+    comments    ""
+    desc        "Date indicates when row is inactive"
+    heading     "Active End"
+    text        "Active End Date"
+    attributes
+        (
+        )
+
+column can_chg          logical default "N"
+    comments    ""
+    desc        "Indicates a student can change this code online."
+    heading     "Can Change?"
+    text        "Can Change?"
+    attributes
+        (
+        )
+
+index
+    unique tmplan_mplan on (meal_plan_type, active_date)
+
+grant
+    alter   to ()
+    control to (group carsprog)
+    delete  to (group carsprog, group registrar, group stu_serv)
+    index   to ()
+    insert  to (group stu_serv, group registrar, group carsprog)
+    select  to (group common, group carsprog)
+    update  to (group stu_serv, group registrar, group carsprog)

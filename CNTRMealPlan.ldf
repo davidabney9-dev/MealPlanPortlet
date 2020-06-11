@@ -1,0 +1,19 @@
+# START - CNTR Meal Plan
+dn: CN=[CUS] CNTRMealPlan,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+jenzabar-ICSNET-GUID:: Zf9VHwmWp0Cm/JZ/ZHN5dQ==
+objectClass: top
+objectClass: jenzabar-ICSNET-PortletTemplate
+displayName: CNTR Meal Plan
+jenzabar-ICSNET-PortletPath: CNTRMealPlan,CNTRMealPlan.MealPlan
+jenzabar-ICSNET-ApplicationPointer: CN=CUS,OU=PortalApplications,CN=Portal,O=Jenzabar,C=US
+instanceType: 4
+objectCategory: CN=Portlet-Template,CN=Schema,cn=configuration,cn=x
+
+dn: OU=Operations,CN=[CUS] CNTRMealPlan,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+instanceType: 4
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,CN=X
+# END - CNTR Meal Plan

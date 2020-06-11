@@ -1,0 +1,106 @@
+table mealselect_cal_rec
+    desc        "Table to hold calendar info for selecting meal plan and"
+                "signing resident agreement."
+    location    "DBS_STUDENT"
+    lockmode    row
+    prefix      "mealselectcal"         { Used by makedef }
+    rowlimits   ??:??
+    status      "Active"
+    text        "Meal Selection Calendar Record"
+    track       "Student"
+
+column mealselectcal_no           serial not null
+    comments    ""
+    desc        "Serial Number"
+                ""
+    heading     "Serial"
+    text        "Serial"
+    attributes
+        (
+        )
+
+column sess               char(4){session} default " " not null
+    comments    ""
+    desc        "Identifies the session associated with this time period."
+    heading     "Sess"
+    text        "Session"
+    attributes
+        (
+        )
+
+column yr                 smallint default 0 not null
+    comments    ""
+    desc        "Identifies the calendar year associated with this time"
+                "period."
+    heading     "Year"
+    text        "Year"
+    attributes
+        (
+        )
+
+column acyr                 char(4)
+    comments    ""
+    desc        "Identifies the academic year associated with this time"
+                "period."
+    heading     "Acad Year"
+    text        "Academic Year"
+    attributes
+        (
+        )
+
+column ra_beg_date date
+    comments    ""
+    desc        "Beginning date of resident agreement signing period"
+    heading     "Res Agree Beg date"
+    text        "Res Agree Beg date"
+    attributes
+        (
+        )
+
+column ra_end_date date
+    comments    ""
+    desc        "Ending date of resident agreement signing period."
+    heading     "Res Agree End Date"
+    text        "Res Agree End Date"
+    attributes
+        (
+        )
+
+column ms_beg_date date
+    comments    ""
+    desc        "Beginning date of meal selection period"
+    heading     "Meal Select Beg date"
+    text        "Meal Select Beg date"
+    attributes
+        (
+        )
+
+column ms_end_date date
+    comments    ""
+    desc        "Ending date of meal selection period."
+    heading     "Meal Select End Date"
+    text        "Meal Select End Date"
+    attributes
+        (
+        )
+
+column new_stus_only char(1) default "N" not null
+    comments    ""
+    desc        "Only new students?"
+    heading     "Only new students?"
+    text        "Only new students?"
+    attributes
+        (
+        )
+
+index
+    unique mealselectcal_no on (mealselectcal_no)
+
+grant
+    alter   to ()
+    control to ( group carsprog)
+    delete  to ( group carsprog)
+    index   to ()
+    insert  to (group stu_serv, group carsprog)
+    select  to (group stu_serv, group student, group carsprog)
+    update  to (group stu_serv, group carsprog)
