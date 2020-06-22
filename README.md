@@ -27,7 +27,7 @@ Program Files\Jenzabar\ICS.NET\Portal\web.config
 
 Important Note: Centre College only cared about meal plans for the Fall and
 Spring, so if you want students to be able edit meal plans for all semesters,
-then you will need to modify the portlet. Please contact david.abney@centre.edu
+then you will need to modify the portlet. Please contact david.abney9@gmail.com
 to figure out how to do this modification. 
 
 
